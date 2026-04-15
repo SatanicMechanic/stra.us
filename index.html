@@ -73,7 +73,7 @@
       min-height: 100vh;
       min-height: 100dvh;
       display: grid;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr;
       padding: var(--pad);
       max-width: 1400px;
       margin: 0 auto;
@@ -120,7 +120,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: clamp(2rem, 8vh, 6rem) 0;
+      padding: clamp(1rem, 3vh, 2.5rem) 0;
     }
 
     .eyebrow {
@@ -129,7 +129,7 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--faint);
-      margin-bottom: clamp(1.25rem, 3vh, 2rem);
+      margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
       opacity: 0;
       animation: rise 1s var(--ease) 0.15s forwards;
     }
@@ -137,8 +137,8 @@
     h1 {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: clamp(4.5rem, 19vw, 22rem);
-      line-height: 0.86;
+      font-size: clamp(3rem, 10vw, 9rem);
+      line-height: 0.9;
       letter-spacing: -0.03em;
       color: var(--fg);
       margin: 0;
@@ -162,7 +162,7 @@
       width: clamp(6rem, 18vw, 14rem);
       height: 1px;
       background: linear-gradient(to right, transparent, var(--whisper) 50%, transparent);
-      margin: clamp(1.75rem, 4.5vh, 3rem) auto clamp(1.25rem, 3vh, 2rem);
+      margin: clamp(1rem, 3vh, 1.75rem) auto clamp(0.75rem, 2vh, 1.25rem);
       opacity: 0;
       animation: rise 1s var(--ease) 0.75s forwards;
     }
@@ -184,20 +184,6 @@
 
     /* ---------- Footer ---------- */
 
-    footer {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      gap: 1rem;
-      font-family: var(--mono);
-      font-size: 0.66rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--faint);
-      opacity: 0;
-      animation: rise 1s var(--ease) 1.05s forwards;
-    }
-
     /* ---------- Animations ---------- */
 
     @keyframes rise {
@@ -211,7 +197,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; }
-      .eyebrow, h1 .line, .rule, .message, footer { opacity: 1; transform: none; }
+      .eyebrow, h1 .line, .rule, .message { opacity: 1; transform: none; }
     }
 
     /* ---------- Small screens ---------- */
@@ -245,10 +231,6 @@
         Nobody's home at the moment. This domain is used primarily for email.
       </p>
     </main>
-
-    <footer>
-      <span>2026</span>
-    </footer>
   </div>
 </body>
 </html>
